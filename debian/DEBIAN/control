@@ -1,0 +1,11 @@
+Package: iobb
+Version: 3.1.0
+Architecture: all
+Maintainer: shabaz123 <unknown@unknown.tld>
+Depends: 
+Installed-Size: in_kb
+Homepage: https://github.com/shabaz123/iobb
+Description: BeagleBone Black Interface Library (GPIO and more) for C Programmers
+ Beaglebone black I/O library , using Memory mapped I/O.
+ Simple C I/O library for Beaglebone Black and variants including PocketBeagle
+ Based on the work of Meng-Lun, Cai (VegetableAvenger) and Shabaz

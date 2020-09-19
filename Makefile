@@ -43,7 +43,18 @@ install :
 	cp ${LIB_PATH}i2cfunc.h /usr/local/include
 	ln -s /usr/local/include/iobb.h /usr/local/include/BBBiolib.h
 
-	
+debian :
+	rm -rf debian/usr
+	mkdir -p debian/usr/local/include
+	mkdir -p debian/usr/local/lib
+	cp ${LIB_PATH}libiobb.a debian/usr/local/lib
+	cp ${LIB_PATH}BBBiolib.h debian/usr/local/include/iobb.h
+	cp ${LIB_PATH}BBBiolib_ADCTSC.h debian/usr/local/include
+	cp ${LIB_PATH}BBBiolib_McSPI.h debian/usr/local/include
+	cp ${LIB_PATH}BBBiolib_PWMSS.h debian/usr/local/include
+	cp ${LIB_PATH}i2cfunc.h debian/usr/local/include
+	ln -s /usr/local/include/iobb.h debian/usr/local/include/BBBiolib.h
+	dpkg-deb --build debian iobb-vLATEST.deb
 
 #---------------------------------------------------
 # Demo
